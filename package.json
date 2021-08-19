@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node 'dist/server.js'",
     "build": "tsc -p . && ncp src/schema dist/schema",
-    "start:dev": "npm run build:dev",
+    "dev": "npm run build:dev",
     "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
   },
   "keywords": [],

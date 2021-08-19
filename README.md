@@ -3,5 +3,5 @@
 how to run ?
 
 ```
-yarn start:dev
+yarn dev
 ```
