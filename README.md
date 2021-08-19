@@ -1,6 +1,6 @@
 # apollo-server-ts-example
 
-run
+how to run ?
 
 ```
 yarn start:dev
