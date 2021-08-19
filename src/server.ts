@@ -5,13 +5,7 @@ import schema from "./schema";
 const app = express();
 
 const server = new ApolloServer({
-  schema,
-  playground: true,
-  context: ({ req }) => {
-    return {
-        header: req.header,
-    }
-  }
+  schema
 });
 
 server.applyMiddleware({ app, path: "/graphql" });
