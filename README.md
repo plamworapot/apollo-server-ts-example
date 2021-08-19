@@ -1,3 +1,3 @@
 # apollo-server-ts-example
 
-run `start:dev`
+run ```start:dev```
