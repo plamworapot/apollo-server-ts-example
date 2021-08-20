@@ -1,3 +1,48 @@
+# Simple Product Case
+interface Product {
+  sku: String!
+  name: String!
+}
+
+type SimpleProduct implements Product {
+  sku: String!
+  name: String!
+
+  qty: Int!
+}
+
+type ConfigulableProduct implements Product {
+  sku: String!
+  name: String!
+
+  children: [SimpleProduct!]!
+}
+
+type User {
+  id: String!
+  name: String!
+  follows: [User!]!
+}
+
+type RegisterResponse {
+  access_token: String!
+  refresh_token: String!
+}
+
+input RegisterInput {
+  email: String!
+  password: String!
+}
+
 type Query {
   hello: String!
+  profiles: [User!]!
+  me: User
+
+  # Simple On product CASE
+  product: [Product] 
+}
+
+type Mutation {
+  register(input: RegisterInput!): RegisterResponse
 }
